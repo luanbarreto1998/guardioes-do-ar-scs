@@ -53,8 +53,8 @@ def ler_ranking_db():
     
     if not df.empty:
         def definir_patente(pts):
-            if pts >= 150: return "🥇 Guardião Supremo"
-            if pts >= 80:  return "🥈 Protetor"
+            if pts >= 100: return "🥇 Guardião Supremo"
+            if pts >= 50:  return "🥈 Protetor"
             return "🥉 Recruta"
         df['Patente'] = df['xp_total'].apply(definir_patente)
         df = df.rename(columns={'nome': 'Patrulheiro', 'xp_total': 'XP'})
